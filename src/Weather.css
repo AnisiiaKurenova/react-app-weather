@@ -1,0 +1,47 @@
+.Weather{
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px grey solid;
+    border-radius: 20px;
+}
+.weather__search{
+    padding: 25px;
+    
+}
+input{
+    width: 100%;
+    padding: 5px;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+ul{
+    list-style: none;
+}
+.weather__today__city, .weather__today__inf {
+    text-align: center;
+}
+h1{
+    font-style: italic;
+    font-size: 35px;
+    color:rgb(51, 50, 50)
+}
+li{
+    color:rgb(51, 50, 50);
+}
+
+.weather__today__inf img{
+    width: 70px;
+    position: relative;
+    top: -10px;
+    margin-right: 10px;
+}
+.unit{
+    font-size: 16px;
+    position: relative;
+    top: -14px;
+}
+.weather__today__inf .temp{
+    font-size: 35px;
+    font-weight: 600;
+}
