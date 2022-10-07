@@ -18,7 +18,6 @@ export default function WeatherForecastDay(props){
 
         return (days[day])
     }
-    console.log(props)
     return (
       <div>
         <p> {date()} </p>

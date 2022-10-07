@@ -1,4 +1,5 @@
-import React, {useState} from "react"
+/* eslint-disable no-unused-expressions */
+import React, {useState, useEffect} from "react"
 import "./WeatherForecastFive.css"
 import WeatherForecastDay from "./WeatherForecastDay"
 import axios from "axios";
@@ -10,17 +11,32 @@ let [forecast, setForecast] = useState (null)
         setLoaded(true)
         setForecast(response.data.daily)
     }
+    useEffect(() =>{
+      setLoaded(false);
+    }, [props.coordinate]);
 
     if(loaded){
-      return(
+      return (
         <div className="WeatherForecastFive">
-    <div className="row">
-          <div className="col">
-      <WeatherForecastDay forecast={forecast[0]} />
-    </div>
-    </div>
-      </div>
-      )
+          <div className="row">
+            <div className="col">
+              <WeatherForecastDay forecast={forecast[0]} />
+            </div>
+            <div className="col">
+              <WeatherForecastDay forecast={forecast[1]} />
+            </div>
+            <div className="col">
+              <WeatherForecastDay forecast={forecast[2]} />
+            </div>
+            <div className="col">
+              <WeatherForecastDay forecast={forecast[3]} />
+            </div>
+            <div className="col">
+              <WeatherForecastDay forecast={forecast[4]} />
+            </div>
+          </div>
+        </div>
+      );
     } else {
     
     let lat= props.coordinate.lat
